@@ -1,4 +1,5 @@
 # Rust Labs
+![alt text](https://github.com/AKRiLLiCK/rust-labs/blob/b56d4031d63a7336e51f24454a8597e30e9380bc/icon.png)
 
 *A sandbox of small, focused Rust experiments designed to build intuition through practice.*
 

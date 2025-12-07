@@ -32,9 +32,9 @@ Whether you want to add a tiny lab or build a deeper experiment, the guiding pri
 ## 🔧 How to Add a New Lab or Experiment
 
 1. Inside `labs/`, run:  
-   ```bash
+```bash
    cargo new <lab-name> --bin
-````
+```
 
 Choose a clear, concept-focused name (e.g. `ownership-moves`, `async-lifetimes`, `unsafe-ptrs`, etc.).
 
@@ -83,7 +83,3 @@ If you’re unsure whether a change fits — a short GitHub issue describing the
 All contributions follow the same MIT license as this repository.
 
 Happy experimenting 🦀
-
-```
-::contentReference[oaicite:0]{index=0}
-```

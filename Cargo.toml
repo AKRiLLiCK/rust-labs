@@ -1,6 +1,6 @@
 [workspace]
 resolver = "2"
 members = [
-    "labs/ownership-moves"
+    "labs/ownership-n-moves"
     # add more labs here
 ]

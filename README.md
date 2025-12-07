@@ -62,24 +62,24 @@ This repository is organized as a **Cargo Workspace**. You can run experiments f
 
 ## 🧪 Labs
 
-Each lab focuses on a specific "Aha!" moment in the Rust learning curve.
+Discover self-contained experiments, each exploring a single Rust concept.  
+**Run any lab from root:** `cargo run -p <lab-name>`
 
-| Concept | Directory | Focus & "Aha" Moment |
-| :--- | :--- | :--- |
-| **Ownership & Moves** | [`labs/ownership-moves/`](labs/ownership-moves/) | **The Core:** Stack vs. Heap. Why values "move" instead of copy. Understanding Drop semantics. |
-| **Borrowing & Refs** | [`labs/borrowing/`](labs/borrowing/) | **The Rules:** Immutable `&T` vs Mutable `&mut T`. Visualizing aliasing rules that prevent data races. |
-| **Lifetimes (Intro)** | [`labs/lifetimes-basic/`](labs/lifetimes-basic/) | **The Contract:** How the compiler tracks references. Why generic lifetime parameters exist. |
-| **Pattern Matching** | [`labs/patterns/`](labs/patterns/) | **Control Flow:** Destructuring structs/enums. Match guards. Irrefutable vs. Refutable patterns. |
-| **Traits & Generics** | [`labs/traits-generics/`](labs/traits-generics/) | **Polymorphism:** Rust's answer to interfaces. Trait bounds, `impl Trait`, and monomorphization. |
-| **Error Handling** | [`labs/errors/`](labs/errors/) | **Safety:** `Result` vs `Option`. The `?` operator. Designing custom error enums properly. |
-| **Iterators** | [`labs/iterators/`](labs/iterators/) | **Functional:** Lazy evaluation, adapters (`map`, `filter`), and Zero-Cost Abstractions. |
-| **Concurrency** | [`labs/concurrency/`](labs/concurrency/) | **Threads:** `std::thread`, channels (`mpsc`), and shared state (`Arc<Mutex<T>>`). |
-| **Modules** | [`labs/modules/`](labs/modules/) | **Structure:** Visibility (`pub`), module trees, and file system hierarchy. |
+| Concept               | Directory                         | Status |
+|-----------------------|-----------------------------------|--------|
+| **Ownership & Moves** | [`labs/ownership-moves/`](labs/ownership-moves/) | 🔴 Planned |
+| **Borrowing & Refs**  | [`labs/borrowing/`](labs/borrowing/)             | 🔴 Planned |
+| **Lifetimes (Intro)** | [`labs/lifetimes-basic/`](labs/lifetimes-basic/) | 🔴 Planned |
+| **Pattern Matching**  | [`labs/patterns/`](labs/patterns/)               | 🔴 Planned |
+| **Traits & Generics** | [`labs/traits-generics/`](labs/traits-generics/) | 🔴 Planned |
+| **Error Handling**    | [`labs/errors/`](labs/errors/)                    | 🔴 Planned |
+| **Iterators**         | [`labs/iterators/`](labs/iterators/)              | 🔴 Planned |
+| **Concurrency**       | [`labs/concurrency/`](labs/concurrency/)          | 🔴 Planned |
+| **Modules**           | [`labs/modules/`](labs/modules/)                  | 🔴 Planned |
 
-### 🚧 Upcoming Labs (Roadmap)
-*   `async-await` (Tokio basics, Futures)
-*   `smart-pointers` (`Box`, `Rc`, `RefCell` deep dives)
-*   `unsafe` (Raw pointers and FFI)
+**Legend:** 🟢 Ready • 🟡 WIP • 🔴 Planned  
+
+**Add your own!** Follow [CONTRIBUTING.md](CONTRIBUTING.md) → `cargo new <lab-name> --bin` + `notes.md`
 
 ---
 

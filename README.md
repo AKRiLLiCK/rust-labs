@@ -1,62 +1,101 @@
-# Rust Labs
-![alt text](https://github.com/AKRiLLiCK/rust-labs/blob/b56d4031d63a7336e51f24454a8597e30e9380bc/icon.png)
+<div align="center">
 
-A playground of focused Rust experiments. Small, clear, practical.
-Made with love with Rust ❤️
+<img src="icon.png" alt="Rust Labs Logo" width="200"/>
+
+# Rust Labs
+
+**A playground of focused Rust experiments. Small, clear, practical.**  
+*Made with love with Rust ❤️*
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Rust](https://img.shields.io/badge/rust-stable-e57324.svg)](https://www.rust-lang.org/)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+
+[**Explore Labs**](#-labs) • [**How to Run**](#-getting-started) • [**Contribute**](#-contributing)
+
+</div>
 
 ---
 
-## 📘 What is this
+## 📘 Philosophy: Why This Exists
 
-Rust Labs is a collection of self-contained labs, each exploring a single Rust concept in isolation.
-Think ownership, borrowing, lifetimes, traits, iterators, error handling, concurrency — all broken down into bite-sized experiments.
+Rust mastery comes from **mental models**, not just syntax.
 
-The goal is simple: minimal programs that teach by doing. Break things. Fix things. Internalize how Rust really works.
+**Rust Labs** is a collection of self-contained experiments, each exploring a single Rust concept in isolation. It is designed for developers—especially those migrating from languages like C++, Python, or JavaScript—who want to internalize *how* Rust works, rather than just blindly writing code that compiles.
+
+The goal is simple: **Teach by doing.**
+*   ❌ No "fill in the missing semicolon" drills.
+*   ✅ Minimal, runnable programs that you can break, fix, and analyze.
+*   ✅ Deep explanations of "why" things crash or compile.
+
+---
+
+## 🚀 Getting Started
+
+This repository is organized as a **Cargo Workspace**. You can run experiments from the root or navigate into specific labs.
+
+### Prerequisites
+*   [Install Rust](https://www.rust-lang.org/tools/install) (latest stable).
+
+### Workflow
+1.  **Clone the repo:**
+    ```
+    git clone https://github.com/AKRiLLiCK/rust-labs.git
+    cd rust-labs
+    ```
+
+2.  **Pick a lab and run it:**
+    *   *Option A (From Root):*
+        ```
+        cargo run -p ownership-moves
+        ```
+    *   *Option B (Navigate):*
+        ```
+        cd labs/ownership-moves
+        cargo run
+        ```
+
+3.  **The most important step:**
+    Open the source code (`src/main.rs`). Read the comments. Uncomment the "broken" lines to see the compiler errors yourself. **Break it, then fix it.**
 
 ---
 
 ## 🧪 Labs
 
-Each lab includes:
+Each lab focuses on a specific "Aha!" moment in the Rust learning curve.
 
-* A brief concept explanation
-* Minimal example code
-* Notes on lessons, trade-offs, and “aha” moments
+| Concept | Directory | Focus & "Aha" Moment |
+| :--- | :--- | :--- |
+| **Ownership & Moves** | [`labs/ownership-moves/`](labs/ownership-moves/) | **The Core:** Stack vs. Heap. Why values "move" instead of copy. Understanding Drop semantics. |
+| **Borrowing & Refs** | [`labs/borrowing/`](labs/borrowing/) | **The Rules:** Immutable `&T` vs Mutable `&mut T`. Visualizing aliasing rules that prevent data races. |
+| **Lifetimes (Intro)** | [`labs/lifetimes-basic/`](labs/lifetimes-basic/) | **The Contract:** How the compiler tracks references. Why generic lifetime parameters exist. |
+| **Pattern Matching** | [`labs/patterns/`](labs/patterns/) | **Control Flow:** Destructuring structs/enums. Match guards. Irrefutable vs. Refutable patterns. |
+| **Traits & Generics** | [`labs/traits-generics/`](labs/traits-generics/) | **Polymorphism:** Rust's answer to interfaces. Trait bounds, `impl Trait`, and monomorphization. |
+| **Error Handling** | [`labs/errors/`](labs/errors/) | **Safety:** `Result` vs `Option`. The `?` operator. Designing custom error enums properly. |
+| **Iterators** | [`labs/iterators/`](labs/iterators/) | **Functional:** Lazy evaluation, adapters (`map`, `filter`), and Zero-Cost Abstractions. |
+| **Concurrency** | [`labs/concurrency/`](labs/concurrency/) | **Threads:** `std::thread`, channels (`mpsc`), and shared state (`Arc<Mutex<T>>`). |
+| **Modules** | [`labs/modules/`](labs/modules/) | **Structure:** Visibility (`pub`), module trees, and file system hierarchy. |
 
-| Concept                     | Directory               | Focus                                                                            |
-| --------------------------- | ----------------------- | -------------------------------------------------------------------------------- |
-| Ownership & Moves           | `labs/ownership-moves/` | How values move, copy, and drop; why some types copy implicitly and others don’t |
-| Borrowing & References      | `labs/borrowing/`       | Shared `&T` vs mutable `&mut T`; aliasing rules and compiler restrictions        |
-| Lifetimes (Intro)           | `labs/lifetimes-basic/` | What lifetimes represent and why they exist; minimal examples                    |
-| Pattern Matching            | `labs/patterns/`        | Destructuring, guards, match arms, irrefutable/refutable patterns                |
-| Traits & Generics           | `labs/traits-generics/` | Custom traits, trait bounds, generics, type inference quirks                     |
-| Error Handling              | `labs/errors/`          | `Result`, `?`, custom error enums, mapping functions                             |
-| Iterators                   | `labs/iterators/`       | Custom iterators, adapters, lazy evaluation, data flow                           |
-| Concurrency                 | `labs/concurrency/`     | Threads, channels, shared-state synchronization, early async experiments         |
-| Modules & Project Structure | `labs/modules/`         | Visibility, module trees, file layout, crate structure                           |
-
-More labs can be added over time: async/await, smart pointers, unsafe code, design patterns, and more.
-
----
-
-## 🚀 How to Use
-
-1. Pick a lab.
-2. Run the code.
-3. Break it. Fix it. Modify it.
-4. Take notes on what clicked — the “aha” moments matter more than code that just runs.
-
-Labs are small — finish one in under two hours. Deep enough to build real intuition.
+### 🚧 Upcoming Labs (Roadmap)
+*   `async-await` (Tokio basics, Futures)
+*   `smart-pointers` (`Box`, `Rc`, `RefCell` deep dives)
+*   `unsafe` (Raw pointers and FFI)
 
 ---
 
-## 🎯 Why This Exists
+## 🤝 Contributing
 
-Rust mastery comes from mental models, not just syntax. These labs give you hands-on experience that sticks. Perfect for personal learning, creating future guides, or teaching others.
+This is an **Open Sandbox**. Contributions are welcome!
+
+The goal is not just to add code, but to add **clarity**. If you want to add a lab:
+1.  **Keep it Focused:** One concept per lab.
+2.  **Explain the "Why":** Comments should explain *why* the code behaves this way, not just what it does.
+3.  **Include "Break Me" Sections:** clearly mark lines that users should uncomment to trigger interesting compiler errors.
+
+Please open an issue to discuss a new lab before submitting a PR.
 
 ---
 
 ## 📄 License
 
-MIT — use, fork, learn, experiment.
-
+MIT — Use, fork, learn, experiment.

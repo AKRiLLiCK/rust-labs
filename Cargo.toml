@@ -1,0 +1,8 @@
+[workspace]
+resolver = "2"
+members = [
+    "labs/ownership-moves",
+    "labs/borrowing",
+    "labs/lifetimes-basic",
+    # add more labs here
+]

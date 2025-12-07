@@ -3,13 +3,5 @@
 version = 4
 
 [[package]]
-name = "borrowing"
-version = "0.1.0"
-
-[[package]]
-name = "lifetimes-basic"
-version = "0.1.0"
-
-[[package]]
 name = "ownership-moves"
 version = "0.1.0"

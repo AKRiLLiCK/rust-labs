@@ -67,7 +67,7 @@ Discover self-contained experiments, each exploring a single Rust concept.
 
 | Concept               | Directory                         | Status      |
 |-----------------------|-----------------------------------|-------------|
-| **Ownership & Moves** | [`labs/ownership-moves/`](labs/ownership-moves/) | 🔴 Planned |
+| **Ownership & Moves** | [`labs/ownership-moves/`](labs/ownership-moves/) | 🟡 WIP |
 | **Borrowing & Refs**  | [`labs/borrowing/`](labs/borrowing/)             | 🔴 Planned |
 | **Lifetimes (Intro)** | [`labs/lifetimes-basic/`](labs/lifetimes-basic/) | 🔴 Planned |
 | **Pattern Matching**  | [`labs/patterns/`](labs/patterns/)               | 🔴 Planned |

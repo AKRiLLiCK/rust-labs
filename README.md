@@ -11,7 +11,7 @@
 [![Rust](https://img.shields.io/badge/rust-stable-e57324.svg)](https://www.rust-lang.org/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
-[**Explore Labs**](#-labs) • [**How to Run**](#-getting-started) • [**Contribute**](#-contributing)
+[**Explore Labs**](#🧪-labs) • [**How to Run**](#🚀-getting-started) • [**Contribute**](#🤝-contributing)
 
 </div>
 
@@ -45,11 +45,15 @@ This repository is organized as a **Cargo Workspace**. You can run experiments f
    ```
 
 2. **Pick a lab and run it:**
-   - *Option A (From Root):*
+   - *Option A (From Root - Single binary):*
      ```
      cargo run -p ownership-moves
      ```
-   - *Option B (Navigate):*
+   - *Option B (From Root - Multiple binaries):*
+     ```
+     cargo run -p ownership-moves --bin basics
+     ```
+   - *Option C (Navigate):*
      ```
      cd labs/ownership-moves
      cargo run
@@ -63,10 +67,10 @@ This repository is organized as a **Cargo Workspace**. You can run experiments f
 ## 🧪 Labs
 
 Discover self-contained experiments, each exploring a single Rust concept.  
-**Run any lab from root:** `cargo run -p <lab-name>`
+**Run any lab from root:** `cargo run -p <lab-name>` or `cargo run -p <lab-name> --bin <sub-lab>`
 
-| Concept               | Directory                         | Status      |
-|-----------------------|-----------------------------------|-------------|
+| Concept               | Directory                         | Status   |
+|-----------------------|-----------------------------------|----------|
 | **Ownership & Moves** | [`labs/ownership-moves/`](labs/ownership-moves/) | 🟡 WIP |
 | **Borrowing & Refs**  | [`labs/borrowing/`](labs/borrowing/)             | 🔴 Planned |
 | **Lifetimes**         | [`labs/lifetimes-basic/`](labs/lifetimes-basic/) | 🔴 Planned |
@@ -89,6 +93,7 @@ This is an **Open Sandbox**. Contributions are welcome!
 
 **See [CONTRIBUTING.md](CONTRIBUTING.md)** for detailed guidelines on:
 - Adding simple labs (100-250 lines, single concept)
+- Multiple binaries for related experiments (`[[bin]]` in Cargo.toml)
 - Creating in-depth experiments with `notes.md`
 - "Break-me" examples and mental model documentation
 

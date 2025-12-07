@@ -1,113 +1,89 @@
 # Contributing to Rust Labs 🦀🧪
 
-Rust Labs is a small playground of experiments, notes, and Rust ideas.
-Everything here exists because someone wanted to explore how Rust works — by *doing*, *breaking*, or *tweaking* code.
-
-If you want to add something, follow the same spirit:
-**keep it tiny, focused, curious, and fun.**
+Welcome to Rust Labs — a personal sandbox for exploring Rust through experiments, notes, and tinkering.  
+Whether you want to add a tiny lab or build a deeper experiment, the guiding principle is: **keep it meaningful, clear, and helpful**.
 
 ---
 
-## 🧠 What’s a “Lab”
+## 🧠 What Counts as a Contribution
 
-A lab is:
+### ✅ Simple Labs  
+- A small crate (≈ 100–250 lines) focused on a **single concept**  
+- Minimal, clear code that you can easily run, break, and explore  
+- Optional `notes.md` for explanation, mental models, or “aha-moments”
 
-* a small crate (usually under ~150–200 lines)
-* exploring **one** Rust concept
-* intentionally minimal — no frameworks, no heavy structure
-* written so you can poke at the code and instantly see what breaks or changes
-* accompanied by a short note explaining the “aha” moment the code illustrates
+### ⚙️ In-Depth Experiments or Engineering Labs  
+- More ambitious labs that explore nontrivial Rust or systems-level ideas  
+- Should include clear documentation and rationale (e.g. `notes.md`, comments, or read-through text)  
+- Complexity is fine — as long as it leads to insight, clarity, or educative value (not just cleverness)  
 
-Labs are *not*:
-
-* full applications or end-user programs
-* “clean architecture” patterns or complex abstractions
-* code that values cleverness over clarity
-* style wars, over-engineering, or rigid structure
-
-This repo is about intuition, not polish.
+**In short:** small and simple *or* intentionally deep and documented.  
 
 ---
 
-## 🔧 How to Add a Lab
+## 🧪 What to Avoid  
 
-### 1. Create a new crate
-
-From inside `labs/`:
-
-```
-cargo new <lab-name> --bin
-```
-
-Pick a simple, meaning-focused name (e.g. `ownership-moves`, `lifetimes-basic`, `iterators-map`).
-
-### 2. Add it to workspace
-
-Include it in the root `Cargo.toml` under the workspace’s members.
-
-### 3. Write the lab
-
-Each lab should have:
-
-* a small `main.rs` (or minimal module structure)
-* comments that explain what's going on
-* ideally, at least one “break this” example to demonstrate compiler behavior or runtime error
-* code focusing on a single concept — nothing extra
-
-Suggested minimal layout:
-
-```rust
-//! Lab: <name>
-//! Goal: What this lab is about.
-//! Concept: The Rust idea under investigation.
-
-fn main() {
-    println!("Rust Lab: <name>");
-
-    // Working example
-
-    // --- BREAK THIS to see what happens ---  
-    // let x = ...; // causes compile-time error or undefined behavior
-}
-```
-
-### 4. Update the README
-
-Add one line in the labs table:
-
-```
-| <Concept> | `labs/<lab-name>/` | <One-line explanation> |
-```
+- Cleverness or abstraction that hides understanding  
+- Over-engineering for the sake of “looking sophisticated” without educational purpose  
+- Labs that do too many unrelated things at once — clarity of concept matters  
 
 ---
 
-## 🧪 Improving or Refactoring Existing Labs
+## 🔧 How to Add a New Lab or Experiment
 
-Small adjustments are welcome — e.g.:
+1. Inside `labs/`, run:  
+   ```bash
+   cargo new <lab-name> --bin
+````
 
-* clearer comments
-* simpler or more illustrative examples
-* better “break-me” cases
-* cleanup of unnecessary code
+Choose a clear, concept-focused name (e.g. `ownership-moves`, `async-lifetimes`, `unsafe-ptrs`, etc.).
 
-If you want to broaden the scope too much — split into separate labs so each stays focused.
+2. Add the new crate to the workspace by listing it in the root `Cargo.toml` under `members`.
+
+3. Write the code:
+
+   * For simple labs: minimal `main.rs`, small number of lines, easy to run or break.
+   * For deeper experiments: code plus documentation (in `notes.md` or comments) explaining the purpose, trade-offs, and what you learn.
+
+4. (Recommended) Add a `notes.md` in the lab directory, covering:
+
+   * What the lab explores
+   * Why the concept matters
+   * What happens when you tweak or break things
+   * What you learned or found interesting
+   * Ideas for further experiments
+
+5. (If adding a new lab) Optional: add a line in the main `README.md` table referencing the new lab.
 
 ---
 
-## ✔️ Quick Checklist Before Submitting
+## 🧰 Improving or Updating Existing Labs
 
-* Lab is small (approx. ≤ 200 lines)
-* Focuses on a single concept
-* Contains at least one illustrative “break-me” or minimal error-triggering example
-* Code runs (or fails intentionally) — that failure illustrates something real
-* README table updated (if adding a new lab)
+* Simplify or clarify code where helpful
+* Add or improve `notes.md` documentation to increase understanding
+* Add “break-me” examples to clarify Rust behavior where appropriate
+* If a lab grows in scope, consider splitting into multiple labs each focusing on a single concept
 
-If you’re unsure: better to open an issue first and sketch the idea.
+---
+
+## ✔️ Checklist Before Submitting
+
+* Lab has a clear purpose
+* Concept is well-defined
+* Code is small (for simple labs) or documented (for complex ones)
+* If applicable, `notes.md` explains what this lab teaches or reveals
+* Workspace setup reflects the new addition (if any)
+
+If you’re unsure whether a change fits — a short GitHub issue describing the idea first is totally fine.
 
 ---
 
 ## 📄 License
 
-By contributing, you agree that your work is under the same MIT license as this repository.
+All contributions follow the same MIT license as this repository.
 
-Happy experimenting 🦀🎉
+Happy experimenting 🦀
+
+```
+::contentReference[oaicite:0]{index=0}
+```
